@@ -6,6 +6,7 @@ import Search from "./components/search/Search.components";
 import { User } from "./constants/interface";
 import UserPage from "./page/User.page";
 import PostPage from "./page/Posts.page";
+import AlbumPage from "./page/Albums.page";
 
 function App() {
   const [users, setUsers] = useState<User[]>([]);
@@ -28,7 +29,10 @@ function App() {
   const handleInputChange = (text: string) => {
     let newArr = [...users];
     newArr = newArr.filter((el) => {
-      return el.name.includes(text) || el.username.includes(text);
+      return (
+        el.name.toLocaleLowerCase().includes(text.toLocaleLowerCase()) ||
+        el.username.toLocaleLowerCase().includes(text.toLocaleLowerCase())
+      );
     });
     setFilteredData(newArr);
   };
@@ -45,7 +49,9 @@ function App() {
             </div>
           }
         />
-        <Route path="/post" element={<PostPage />} />
+        <Route path="/post/:userId" element={<PostPage />} />
+
+        <Route path="/album/:userId" element={<AlbumPage />} />
       </Routes>
     </BrowserRouter>
   );

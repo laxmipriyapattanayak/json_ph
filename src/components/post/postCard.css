@@ -1,0 +1,20 @@
+.post-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  width: 400px;
+  height: 130px;
+}
+.part {
+  border: 1px solid violet;
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.body {
+}

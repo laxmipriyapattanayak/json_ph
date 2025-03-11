@@ -1,4 +1,4 @@
-import UserCard from "../components/UserCard.components";
+import UserCard from "../components/userCard/UserCard.components";
 import { User } from "../constants/interface";
 
 const UserPage = ({ users }: { users: User[] }) => {

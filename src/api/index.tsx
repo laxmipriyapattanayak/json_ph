@@ -25,8 +25,20 @@ export const fetchAllUserPosts = async (userId: string): Promise<Post[]> => {
   }
 };
 
+export const fetchPostComments = async (postId: string): Promise<Comment[]> => {
+  try {
+    const res = await axios.get(
+      `https://jsonplaceholder.typicode.com/comments?postId=${postId}`
+    );
+    console.log(res.data);
+    return res.data ?? [];
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
+
 export const fetchUserAlbums = async (userId: string): Promise<Album[]> => {
-  //https://jsonplaceholder.typicode.com/albums?userId=1
   try {
     const res = await axios.get(
       `https://jsonplaceholder.typicode.com/albums?userId=${userId}`

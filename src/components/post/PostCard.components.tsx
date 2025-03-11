@@ -3,8 +3,7 @@ import "./postCard.css";
 
 const PostCard = ({ postDetails }: { postDetails: Post }) => {
   const handlePostClick = () => {
-    //https://jsonplaceholder.typicode.com/posts/1/comments
-    window.location.href = `/post/${postDetails.id}/comments`;
+    window.location.href = `/comment/${postDetails.id}`;
     console.log(postDetails.id);
   };
   return (

@@ -7,10 +7,7 @@ const UserAlbum = ({ albumDetails }: { albumDetails: Album }) => {
 
   return (
     <div className="post-card-wrapper">
-      <div>{albumDetails.userId}</div>
       <div className="title">{albumDetails.title}</div>
-      <div>{albumDetails.id}</div>
-
       <div>
         <button onClick={handleAlbumClick}>photos</button>
       </div>

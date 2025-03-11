@@ -7,6 +7,7 @@ import { User } from "./constants/interface";
 import UserPage from "./page/User.page";
 import PostPage from "./page/Posts.page";
 import AlbumPage from "./page/Albums.page";
+import CommentPage from "./page/Comments.page";
 
 function App() {
   const [users, setUsers] = useState<User[]>([]);
@@ -52,6 +53,7 @@ function App() {
         <Route path="/post/:userId" element={<PostPage />} />
 
         <Route path="/album/:userId" element={<AlbumPage />} />
+        <Route path="comment/:postId" element={<CommentPage />} />
       </Routes>
     </BrowserRouter>
   );

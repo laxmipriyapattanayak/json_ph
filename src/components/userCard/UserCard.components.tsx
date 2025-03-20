@@ -4,13 +4,15 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import BusinessIcon from "@mui/icons-material/Business";
+import { useNavigate } from "react-router-dom";
 
 const UserCard = ({ userDetails }: { userDetails: User }) => {
+  const navigate = useNavigate();
   const handleCardClick = () => {
-    window.location.href = `/post/${userDetails.id}`;
+    navigate(`/post/${userDetails.id}`);
   };
   const handleAlbumClick = () => {
-    window.location.href = `/album/${userDetails.id}`;
+    navigate(`/album/${userDetails.id}`);
   };
 
   return (

@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Album, Post, User } from "../constants/interface";
+import { Album, Post, User, Comment } from "../constants/interface";
 
 export const fetchAllUsers = async (): Promise<User[]> => {
   try {
